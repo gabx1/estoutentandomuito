@@ -1,0 +1,114 @@
+/* Bli[n]k
+ * plug.dj CSS tweaks
+ * Made by skiilaa/moriczgergo.
+ */
+
+/* First off, let's start off with custom badges. 
+ * Make sure to replace the x-es with the user ID of the person with the custom badge!
+ */
+.id-48536556 > .badge-box > i {
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	/* We can have a GIF badge... */
+	background: url("https://url/to/image.gif");
+	/* Or we can have a simple image. */
+	background: url("https://i.imgur.com/1ah8qVK.jpg");
+	/* Also, let's set the size of the image just in case the provided is larger. */
+	background-size: 30px 30px;
+}
+
+/* Next, let's do some transparency! */
+#woot, #grab, #meh, #dj-button, #footer {
+	opacity: 0.7;
+}
+
+#chat .cm:nth-child(2n+1) {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Let's make the chat fully transparent! */
+
+#chat .cm:nth-child(2n+1) {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.app-right {
+    background: rgba(0,0,0,0) !important;
+}
+
+#chat .system {
+	background: rgba(0,0,0,0);
+	webkit-box-shadow: inset 0 0 0 1px rgba(0,0,0,0);
+	moz-box-shadow: inset 0 0 0 1px rgba(0,0,0,0);
+	box-shadow: inset 0 0 0 1px rgba(0,0,0,0);
+}
+
+/* Uh-oh! Now if we are on fullscreen, some black appears! No worries!
+ * Let's start off by making the room's background transparent, like this:
+ */
+
+.room-background {
+	background: transparent;
+}
+
+/* Then, we are going to apply the image to the app, not the .room-background element! */
+
+#app {
+	background: url(https://url/to/background-jpg) no-repeat;
+	background-size: cover;
+	/* You can also uncomment this to adjust the position of the image if you don't like the way it is: */
+	/* background-position: right bottom; */
+}
+
+/* Oh no! Now the DJ booth is misplaced! Let's fix that up real fast by changing our background to one that doesn't have the booth,
+ * and let's add this to put back the booth in the right place.
+ */
+
+#dj-booth {
+	background: 26px 146px url('http://i.imgur.com/Rqdti0u.png') no-repeat; /* We provided you an example booth image, but feel free to change it! */
+}
+
+/* Now, everything should be fine! */
+
+/* Let's add some chat tweaks. */
+
+/* This removes "Welcome to plug.dj. Version 1.5.6.9836" */
+.cm.log {
+	display: none;
+}
+
+/* This removes RCS broadcasts. */
+.rsshit.broadcast {
+	display: none;
+}
+
+/* This minifies the RCS donate message, and expands it on hover. */
+.rsshit.rcs-donateChatMessage > .msg > .text {
+    display: none;
+}
+.rsshit.rcs-donateChatMessage:hover > .msg > .text {
+    display: inline;
+}
+
+/* Or if you want it, this removes the RCS donate message. */
+.rsshit.rcs-donateChatMessage {
+	display: none;
+}
+
+/* This minimizes the plug.dj system alerts, and expands them on hover. (Credit to Wolf) */
+#chat .system .text{
+	height: 46px;
+	overflow: auto; 
+}
+#chat .system:hover .text{
+	height: auto;
+}
+
+/* Or if you want it, we can just remove the system alerts (not recommended) */
+.cm.system {
+	display: none;
+}
