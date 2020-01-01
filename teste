@@ -1,45 +1,13 @@
-{
-    "room": "Community Name",
-    "author": "Author",
-    "icon": null,
-    "css": null,
-    "rules": {
-        "allowAutorespond": true,
-        "allowAutowoot": true,
-        "allowAutojoin": true,
-        "allowAutograb": true,
-        "allowSmartVote": true,
-        "allowEmotes": true,
-        "allowShowingMehs": true,
-        "forceSmartVote": false
-    },
-    "ccc": {
-        "admin": null,
-        "ambassador": null,
-        "host": null,
-        "cohost": null,
-        "manager": null,
-        "bouncer": null,
-        "rdj": null,
-        "subscriber": null,
-        "silversubscriber": null,
-        "friend": null,
-        "user": null
-    },
-    "images": {
-        "background": null,
-        "playback": null,
-        "admin": null,
-        "ambassador": null,
-        "host": null,
-        "cohost": null,
-        "manager": null,
-        "bouncer": null,
-        "rdj": null,
-        "subscriber": null,
-        "silversubscriber": null
-    },
-    "emotes": {
-    	"emote_name": null
-    }
+/* ajusta a foto, tira a borda cinza e deixa maior */
+#chat .badge-box i, .right-side-wrapper #chat .badge-box .icon-arrow-down {
+    transform: scale(1) !important;}
+
+/* stαrswithnαmes */
+[data-cid^="48536556-"] .badge-box .bdg,
+#user-rollover.id-20574971 .badge-box .bdg {
+    border-radius: 5px;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    background-image: url("https://imgur.com/OQbJwRG.gif");
 }
